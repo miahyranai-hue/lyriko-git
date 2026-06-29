@@ -1,0 +1,83 @@
+//mode clair et sombre
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page principale</title>
+    <link rel="stylesheet" href="titres.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li class="logo"><i class="fa-solid fa-music"></i>
+                </li>
+            <span class="logo1">Lyriko</span>
+                <ul class="lien" id="menu">
+                    <li class="liens recherche"><a href="index.html">Rechercher</a></li>
+                    <li class="liens artiste"><a href="artistes.html" >Par artistes</a></li>
+                    <li class="liens titres"><a href="titres.html" class="active">Par titres</a></li>
+                    <li class="favoris"><a href="favoris.html" ><i class="fa-regular fa-heart coeur"></i> Favoris</a></li>
+                </ul>
+                 <button id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>                
+        </ul>
+    </nav>
+    </header>
+    <div class="corps">
+        <div class="corps un">
+            <h1>Trouvez les <span>paroles</span>
+        </div>
+        <div class="corps deux">
+            <h1> de vos chansons préférées</h1>
+            <p>Recherchez par un mot, une phrase ou meme un bout de parole.</p>
+
+        </div>
+    </div>
+    <div class="search-box">
+        <div class="search">
+        <input type="text" id="search" placeholder="Ex : Echamé la culpa">
+        </div>
+        <!-- <button class="rechercher">Rechercher</button> -->
+    </div>
+            <!-- Zone des cartes de chansons -->
+            <div id="results"></div>
+            <!-- Zone des paroles de chansons -->
+               
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="box">
+                <h3>A propos</h3>
+                <p></p>
+            </div>
+            <div class="box">
+                <h3>Légal</h3>
+                <p>Conditions</p>
+                <p>Confidentialité</p>
+                <p>Cookies</p>
+            </div>
+            <div class="box">
+                <h3>Contact</h3>
+                <p>Email : Lyriko@contact.com</p>
+                <p>Tel : 0345188862</p>
+                <p>Antananarivo, Madagascar</p>
+            </div>
+        </div>
+            <div class="bottom">
+                <p>© 2026 Lyriko. tous droits réservés.</p>
+            </div>
+
+                
+               
+         
+    </footer>
+    <script src="titres.js">
+ 
+</script>
+</body>
+</html>
