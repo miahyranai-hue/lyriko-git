@@ -172,18 +172,12 @@ a{
 
 
 /* Footer */
-.footer{
-    position: relative;
-    background: #160e16;
-    color: white;
-    padding: 40px 20px;
-    margin-top: 50px;
-}
-
-.footer-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+footer{
+  text-align: center;
+  padding: 15px;
+  background-color: #eddef0;
+  color: #333;
+  margin-top: 20px;
 }
 
 .box{
@@ -224,10 +218,7 @@ a{
    margin-right: 35px;
 }
 
-.footer-container{
-    display: flex;
-    gap: -100px;
-    }
+
 }
 
 @media (max-width: 800px) {
@@ -284,7 +275,7 @@ a{
 
 @media (max-width: 768px) {
     input .search-box{
-        min-width: 500px;
+        max-width: 500px;
     }
 }   
 
