@@ -1,12 +1,10 @@
-//mode clair et sombre
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page principale</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="favoris.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -20,32 +18,34 @@
                     <li class="liens rechercher"><a href="index.html">Recherche</a></li>
                     <li class="liens artiste"><a href="artistes.html" >Par artistes</a></li>
                     <li class="liens titres"><a href="titres.html" >Par titres</a></li>
+                    <li><button id="themeBtn" class="themeBtn">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                    </li>
                     <li class="favoris"><a href="favoris.html" class="active"><i class="fa-regular fa-heart coeur"></i> Favoris</a></li>
                 </ul>
                  <button id="hamburger">
-                <i class="fas fa-bars"></i>
-            </button>                
+                    <i class="fas fa-bars"></i>
+                </button>                
         </ul>
     </nav>
     </header>
     <div class="corps">
         <div class="corps un">
-            <h1>Trouvez les <span>paroles</span>
+            <h1>La liste de vos <span>paroles</span>
         </div>
         <div class="corps deux">
-            <h1> de vos chansons préférées</h1>
-            <p>Recherchez par un mot, une phrase ou meme un bout de parole.</p>
+            <h1>favorites</h1>
 
         </div>
     </div>
-    <div class="search-box">
-        <div class="search">
-        <input type="text" id="searchInput" placeholder="Ex : Echamé la culpa">
-        </div>
-        <!-- <button class="rechercher">Rechercher</button> -->
-    </div>
             <!-- Zone des cartes de chansons -->
-            <div id="resultats"></div>
+
+            <div id="liste-favoris">
+                <div id="lyricsBox"></div>
+        
+        </div>
+            
             <!-- Zone des paroles de chansons -->
                
     <!-- Footer -->
@@ -71,103 +71,8 @@
             <div class="bottom">
                 <p>© 2026 Lyriko. tous droits réservés.</p>
             </div>
-
-                
-               
-         
     </footer>
-    <script>
-    const chansons = [
-        {
-        id: 1,
-        titre: "Shape of you", 
-        artiste: "Ed Sheeran",
-        lyrics: "Ligne 1... Ligne 2 ..."
-        },
-
-        {
-        id: 2,
-        titre: "Always",
-        artiste: "Bon Jovi",
-        lyrics: "Ligne 1... Ligne 2 ..."
-        },
-
-        {
-        id: 3,
-        titre: "Number one girl",
-        artiste: "Rosé",
-        lyrics: "Ligne 1... Ligne 2 ..."
-        }
-];
-
-//barre de recherche fonctionnelle
-let input = document.getElementById("searchInput");
-let resultats = document.getElementById("resultats");
-input.addEventListener("input", function (){
-    let val = input.value.toLowerCase().trim();
-
-    resultats.innerHTML = "";
-
-    if (val === "") return;
-
-    let filtres = chansons.filter(c => c.titre.toLowerCase().includes(val) ||
-                                       c.artiste.toLowerCase().includes(val)); 
-    
-    if (filtres.length === 0) {
-        let div = document.createElement("div");
-        div.classList.add("card", "empty");
-        div.textContent = "Aucun résultat trouvé  !";
-resultats.appendChild(div);       
-        return;
-    }
-
-    filtres.forEach(function (c) {
-        let div = document.createElement("div");
-        div.classList.add("card");
-        div.innerHTML = `
-            <div class="titre">${c.titre}</div>
-            <div class="artiste">${c.artiste}</div>
-            `;
-        div.addEventListener("click", function() {
-            resultats.innerHTML = `
-                <div class="card paroles-card">
-                    <div class="titre UN">${c.titre}</div>
-                    <div class="artiste DEUX">${c.artiste}</div>
-                    <div class="lyrics">${c.lyrics}</div>
-                </div>
-            `;
-        });
-        resultats.appendChild(div);
-         
-    });
-});
-
-//liens navigations
-const liens = document.querySelectorAll("a");
-
-liens.forEach(lien => {
-    lien.addEventListener("click", () => {
-        liens.forEach(l => l.classList.remove("active"));
-        lien.classList.add("active");
-    });
-});
-
-
-    
-// Hamburger Menu Toggle
-const hamburger = document.getElementById("hamburger");
-const menu = document.getElementById("menu");
-hamburger.addEventListener("click", () => {
-    menu.classList.toggle("active");
-
-
-});
-
-//show
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-
-}
+    <script src="favoris.js">
 </script>
 </body>
 </html>
