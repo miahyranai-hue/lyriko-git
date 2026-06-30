@@ -1,0 +1,454 @@
+*{
+    font-family: Arial, Helvetica, sans-serif
+}
+body{
+    background-color:  rgb(239, 237, 241);
+    /* padding: 0; */
+    font-size: 16px;
+    /* line-height: 1.6;
+    min-height: 100vh; */
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    top: 19px;
+}
+
+
+
+/*menu hambergur */
+#hamburger{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 0%;
+}
+
+header nav {
+    background-color: white;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 80px;
+    z-index: 90000px;
+    position: fixed;
+    box-shadow: rgb(41, 40, 40);
+}
+
+
+header nav:hover{
+    background-color: #ffffff;
+}
+
+.logo{
+    position: relative;
+    background: linear-gradient(135deg,#5e24bb 0%, #2d1ac4 50%, #A78BFA 100%);
+    color: white;
+    padding: 4px;
+    border-radius: 10px 0;
+    top: 15px;
+    width: 10px;
+    align-items: center;
+}
+
+.logo:hover{
+    color: #5e24bb ; /*#2d1ac4 50%, #A78BFA 100%) */
+    background: rgb(222, 211, 223);
+    border-radius: 10px 0;
+    border-radius: 10px 0;
+    top: 15px;
+    width: 10px;
+    align-items: center;
+}
+
+.logo1{
+    position: relative;
+    top: 15px;
+    left: 5px;
+    font-weight: bold;
+}
+
+.logoa{
+    position: relative;
+    left: 15px;
+    top: 15px;
+    background: linear-gradient(135deg,#5e24bb 0%, #2d1ac4 50%, #A78BFA 100%);
+    color: white;
+    padding: 4px;
+    border-radius: 10px 0;
+    width: 20px;
+}
+
+.logob{
+    position: relative;
+    bottom: 10px;
+    left: 50px;
+    font-weight: bold;
+}
+
+
+ul li {
+   display: inline;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.lien {
+    margin-left: 430px;
+    display: flex;
+    justify-content: center; 
+    gap: 50px;   
+    /* text-align: center; */
+}
+
+.lien a {
+    text-decoration: none;
+}
+
+.lien a {
+    display: inline-block;
+    transition: transform 0.1s ease;
+}
+
+.lien a:active{
+    transform: translateY(3px);
+
+}
+.lien a.active{
+    text-decoration: underline;
+    text-underline-offset: 31px;
+    text-decoration-color: #5e24bb;
+}
+
+.favoris{
+   margin-left: auto;
+   margin-right: 35px;
+}
+
+.corps{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;    
+}
+
+.corps .un{
+    margin-top: 50px;
+}
+
+.corps span{
+    color: rgb(119, 30, 219);
+    padding: 0 10px;
+}
+
+.corps p{
+    color: rgb(124, 121, 121);
+}
+
+/*barre de recherche */
+.search-box{
+    display: flex;
+    justify-content: center;
+}
+
+.search-box .search input{
+    padding: 10px 50px;/*haut-bas et gauche-droite*/
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+
+/* Footer */
+footer{
+   text-align: center;
+  padding: 15px;
+  background-color: #eddef0;
+  color: #333;
+  margin-top: 20px;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.box{
+    max-width: 250px;
+}
+
+.box h3{
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+.box p{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.box p:hover{
+    color: #bbc6e0;
+}
+
+.bottom{
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media (max-width: 1100px){
+    .lien {
+    margin-left: 100px;
+    display: flex;
+    justify-content: center; 
+    gap: 50px;   
+    /* text-align: center; */
+}
+
+.favoris{
+   margin-left: -1px;
+   margin-right: 35px;
+}
+
+}
+@media (max-width: 800px) {
+      #hamburger{
+        right: 0;
+        display: block;
+        margin-top: 28px;
+
+    }
+    
+    #menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 150px;
+        background: white;
+        padding: 30px;
+  
+    }
+
+    #menu .show{
+        display: flex;
+    }
+
+    #menu.active{
+        display: grid;
+        padding-top: 0;
+    }
+
+    #menu a.active{
+        display: grid;
+        padding-top: 0;
+        text-decoration: none;
+    }
+
+    #menu a:hover{        
+        color: #2d1ac4 ;
+    }
+    .favoris{
+        display: flex;
+        right: 0;
+        top: -1000px;
+    }
+
+    .themeBtn{
+        top: 160px;
+        left: -30px;
+
+    }
+  
+}
+
+
+
+@media (max-width: 768px) {
+    input .search-box{
+       max-width:  500px;
+    }
+}   
+
+/*liste*/
+.card{
+    position: relative;
+    border-radius: 10px;
+    margin: auto;
+    width: 100%;
+    display: block;
+    padding: 5px 20px;
+    justify-content: center;
+    background: white;
+    border-top: 2px solid rgb(205, 186, 228);
+    border-right: 3px solid rgb(205, 186, 228);
+    max-width: 800px;
+    
+}
+
+.paroles-card{
+    border-radius: 10px;
+    margin: auto;
+    width: 100%;
+    display: block;
+    padding: 20px;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-top: 2px solid rgb(205, 186, 228);
+    border-right: 3px solid rgb(205, 186, 228);
+    max-width: 800px;
+}
+.DEUX{
+    margin-bottom: 50px;
+    
+}
+.titre{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.card.empty{
+    color: rgb(52, 2, 56);
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#resultats{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.star{
+    margin-bottom: 50px;
+}
+
+.card-artiste{
+    border-radius: 10px;
+    margin: auto;
+    width: 100%;
+    display: block;
+    
+    justify-content: center;
+    background: white;
+    padding: 5px 20px;
+    border-top: 2px solid rgb(205, 186, 228);
+    border-right: 3px solid rgb(205, 186, 228);
+    max-width: 800px;
+}
+
+.card-paroles{
+    border-radius: 10px;
+    margin: auto;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    background: white;
+    padding: 5px 20px;
+    border-top: 2px solid rgb(205, 186, 228);
+    border-right: 3px solid rgb(205, 186, 228);
+    max-width: 800px;
+}
+/* #artistes{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+} */
+
+.paroles{
+    white-space: pre-line;
+    
+
+}
+
+.coeur-favori{
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+    top: 40%;
+    right: 2%;
+    color: #bdbdbd;
+    
+
+}
+
+.coeur-favori.actif{
+    color: red;
+}
+
+/*mode sombre*/
+.dark-mode{
+    background-color: #242323;
+}
+
+.dark-mode .logo1{
+    color: white;
+}
+
+.dark-mode .card,
+.dark-mode .card-paroles,
+.dark-mode .card-artiste{
+    background: #313030;
+    color: aliceblue;
+}
+
+.dark-mode p,
+.dark-mode h1{
+    color: rgb(167, 162, 162);
+}
+.dark-mode .footer{
+    background: #0e0d0e;
+}
+
+
+.dark-mode header nav{
+    background: black;
+    
+}
+
+.dark-mode #themeBtn,
+.dark-mode #hamburger
+{
+    color: aliceblue;
+}
+
+.dark-mode .lien .liens a
+{
+    color: white;
+}
+
+.dark-mode .lien .favoris a{
+    color: aliceblue;
+}
+
+.dark-mode #menu{
+   background-color: black;
+    color: white;
+}
+
+#themeBtn{
+    position: absolute;
+    right: 10%;
+    bottom: 17%;
+    
+}
