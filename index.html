@@ -1,5 +1,3 @@
-//mode clair et sombre
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +18,11 @@
                     <li class="liens recherche"><a href="index.html" class="active">Rechercher</a></li>
                     <li class="liens artiste"><a href="artistes.html" >Par artistes</a></li>
                     <li class="liens titres"><a href="titres.html" >Par titres</a></li>
-                    <li class="favoris"><a href="favoris.html" ><i class="fa-regular fa-heart coeur"></i> Favoris</a></li>
+                    <li><button id="themeBtn" class="themeBtn">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                    </li>
+                    <li class="favoris"><a href="favoris.html" ><i class="fa-regular fa-heart coeur"></i> Favoris</a></li>     
                 </ul>
                  <button id="hamburger">
                 <i class="fas fa-bars"></i>
@@ -40,12 +42,12 @@
     </div>
     <div class="search-box">
         <div class="search">
-        <input type="text" id="searchInput" placeholder="Ex : Echamé la culpa">
+        <input type="text" id="recherche" placeholder="Ex : Echamé la culpa">
         </div>
         <!-- <button class="rechercher">Rechercher</button> -->
     </div>
             <!-- Zone des cartes de chansons -->
-            <div id="resultats"></div>
+            <div id="artistes"></div>
             <!-- Zone des paroles de chansons -->
                
     <!-- Footer -->
@@ -70,11 +72,7 @@
         </div>
             <div class="bottom">
                 <p>© 2026 Lyriko. tous droits réservés.</p>
-            </div>
-
-                
-               
-         
+            </div>     
     </footer>
     <script src="index.js"></script>
 </body>
