@@ -12,7 +12,9 @@ body{
 button{
     padding: 10px;
     margin-top: 20px;
+    font-size: 20px;
 }
+
 
 /*menu hambergur */
 #hamburger{
@@ -27,6 +29,7 @@ button{
 }
 
 header nav {
+    position: relative;
     background-color: white;
     top: 0%;
     left: 0%;
@@ -110,20 +113,22 @@ a{
 }
 
 .lien a {
-    display: inline-block;
-    transition: transform 0.1s ease;
+    text-decoration: none;
 }
 
-.lien a.active{
-    text-decoration: underline;
-    text-underline-offset: 31px;
-    text-decoration-color: #5e24bb;
-
+.lien a {
+    display: inline-block;
+    transition: transform 0.1s ease;
 }
 
 .lien a:active{
     transform: translateY(3px);
 
+}
+.lien a.active{
+    text-decoration: underline;
+    text-underline-offset: 31px;
+    text-decoration-color: #5e24bb;
 }
 
 .favoris{
@@ -168,9 +173,11 @@ a{
 
 /* Footer */
 .footer{
+    position: relative;
     background: #160e16;
     color: white;
     padding: 40px 20px;
+    margin-top: 50px;
 }
 
 .footer-container{
@@ -222,10 +229,12 @@ a{
     gap: -100px;
     }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 800px) {
      #hamburger{
         right: 0;
         display: block;
+        margin-top: 28px;
     }
     
     #menu{
@@ -250,6 +259,8 @@ a{
     }
 
     #menu a.active{
+        display: grid;
+        padding-top: 0;
         text-decoration: none;
     }
 
@@ -259,10 +270,13 @@ a{
     .favoris{
         display: flex;
         right: 0;
+        top: -1000px;
     }
 
-    .footer-container{
-        
+    .themeBtn{
+        top: 160px;
+        left: -30px;
+
     }
 }
 
@@ -276,17 +290,17 @@ a{
 
 /*liste*/
 .card{
+    position: relative;
     border-radius: 10px;
     margin: auto;
     width: 100%;
     display: block;
-    padding: 20px;
+    padding: 5px 20px;
     justify-content: center;
     background: white;
     border-top: 2px solid rgb(205, 186, 228);
     border-right: 3px solid rgb(205, 186, 228);
     max-width: 800px;
-    
 }
 
 .paroles-card{
@@ -316,7 +330,6 @@ a{
     margin: auto;
     border-radius: 20px;
     display: flex;
-    padding: 20px;
     justify-content: center;
 }
 
@@ -329,3 +342,126 @@ a{
     justify-content: center;
 }
 
+.star{
+    margin-bottom: 50px;
+}
+
+.card-artiste{
+    border-radius: 10px;
+    margin: auto;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    background: white;
+    padding: 5px 20px;
+    border-top: 2px solid rgb(205, 186, 228);
+    border-right: 3px solid rgb(205, 186, 228);
+    max-width: 800px;
+}
+
+.card-paroles{
+    border-radius: 10px;
+    margin: auto;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    background: white;
+    padding: 5px 20px;
+    border-top: 2px solid rgb(205, 186, 228);
+    border-right: 3px solid rgb(205, 186, 228);
+    max-width: 800px;
+}
+/* #artistes{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+} */
+
+.paroles{
+    white-space: pre-line;
+    
+
+}
+
+.coeur-favori{
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+    top: 40%;
+    right: 2%;
+    color: #bdbdbd;
+    
+
+}
+
+.coeur-favori.actif{
+    color: red;
+}
+
+#themeBtn{
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/*mode sombre*/
+.dark-mode{
+    background-color: #242323;
+}
+
+.dark-mode .logo1{
+    color: white;
+}
+
+.dark-mode .card,
+.dark-mode .card-paroles,
+.dark-mode .card-artiste{
+    background: #313030;
+    color: aliceblue;
+}
+
+.dark-mode p,
+.dark-mode h1{
+    color: rgb(167, 162, 162);
+}
+.dark-mode .footer{
+    background: #0e0d0e;
+}
+
+
+.dark-mode header nav{
+    background: black;
+    
+}
+
+.dark-mode #themeBtn,
+.dark-mode #hamburger
+{
+    color: aliceblue;
+}
+
+.dark-mode .lien .liens a
+{
+    color: white;
+}
+
+.dark-mode .lien .favoris a{
+    color: aliceblue;
+}
+
+.dark-mode #menu{
+   background-color: black;
+    color: white;
+}
+
+#themeBtn{
+    position: absolute;
+    right: 10%;
+    bottom: 17%;
+}
