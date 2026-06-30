@@ -9,10 +9,7 @@ body{
     min-height: 100vh; */
 }
 
-button{
-    padding: 10px;
-    margin-top: 20px;
-}
+
 
 
 /*menu hambergur */
@@ -174,6 +171,7 @@ a{
     background: #160e16;
     color: white;
     padding: 40px 20px;
+    margin-top: 50px;
 }
 
 .footer-container{
@@ -225,10 +223,11 @@ a{
     gap: -100px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
      #hamburger{
         right: 0;
         display: block;
+        margin-top: 28px;
     }
     
     #menu{
@@ -263,10 +262,6 @@ a{
         display: flex;
         right: 0;
     }
-
-    .footer-container{
-        
-    }
 }
 
 
@@ -279,6 +274,7 @@ a{
 
 /*liste*/
 .card{
+    position: relative;
     border-radius: 10px;
     margin: auto;
     width: 100%;
@@ -340,7 +336,6 @@ a{
     margin: auto;
     width: 100%;
     display: block;
-    
     justify-content: center;
     background: white;
     padding: 5px 20px;
@@ -369,3 +364,89 @@ a{
     margin-bottom: 50px;
     justify-content: center;
 } */
+
+.paroles{
+    white-space: pre-line;
+    
+
+}
+
+.coeur-favori{
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+    top: 40%;
+    right: 2%;
+    color: #bdbdbd;
+    
+
+}
+
+.coeur-favori.actif{
+    color: red;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    top: 20px;
+    font-size: 20px;
+}
+
+/*mode sombre*/
+.dark-mode{
+    background-color: #242323;
+}
+
+.dark-mode .logo1{
+    color: white;
+}
+
+.dark-mode .card,
+.dark-mode .card-paroles,
+.dark-mode .card-artiste{
+    background: #313030;
+    color: aliceblue;
+}
+
+.dark-mode p,
+.dark-mode h1{
+    color: rgb(167, 162, 162);
+}
+.dark-mode .footer{
+    background: #0e0d0e;
+}
+
+
+.dark-mode header nav{
+    background: black;
+    
+}
+
+.dark-mode #themeBtn,
+.dark-mode #hamburger
+{
+    color: aliceblue;
+}
+
+.dark-mode .lien .liens a
+{
+    color: white;
+}
+
+.dark-mode .lien .favoris a{
+    color: aliceblue;
+}
+
+.dark-mode #menu{
+   background-color: black;
+    color: white;
+}
+
+#themeBtn{
+    position: absolute;
+    right: 10%;
+    bottom: 17%;
+    
+}
